@@ -1,0 +1,1 @@
+npm i framer-motion react-icons sass react-hot-toast typewriter-effect react-responsive-carousel firebase
