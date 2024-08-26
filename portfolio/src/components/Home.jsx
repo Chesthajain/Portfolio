@@ -9,16 +9,21 @@ const Home = ({ ratio }) => {
   const projectCount = useRef(null);
 
   const animationClientsCount = () => {
-    animate(0, 100, {
-      duration: 1,
-      onUpdate: (v) => (clientCount.current.textContent = v.toFixed()),
-    });
+    if (clientCount.current) {
+      animate(0, 100, {
+        duration: 1,
+        onUpdate: (v) => (clientCount.current.textContent = v.toFixed()),
+      });
+    }
   };
+
   const animationProjectsCount = () => {
-    animate(0, 500, {
-      duration: 1,
-      onUpdate: (v) => (projectCount.current.textContent = v.toFixed()),
-    });
+    if (projectCount.current) {
+      animate(0, 500, {
+        duration: 1,
+        onUpdate: (v) => (projectCount.current.textContent = v.toFixed()),
+      });
+    }
   };
 
   const animations = {
@@ -43,6 +48,7 @@ const Home = ({ ratio }) => {
       },
     },
   };
+
   return (
     <div id="home">
       <section>
@@ -53,7 +59,7 @@ const Home = ({ ratio }) => {
 
           <Typewriter
             options={{
-              strings: ["Web Developer"],
+              strings: ["A Developer", "A Designer", "A Creator"],
               autoStart: true,
               loop: true,
               cursor: "",
@@ -62,7 +68,7 @@ const Home = ({ ratio }) => {
           />
 
           <div>
-            <a href="mailto:official.6packprogrammer@gmail.com">Hire Me</a>
+            <a href="mailto:cheshtajain1712@gmail.com">Hire Me</a>
             <a href="#work">
               Projects <BsArrowUpRight />
             </a>
@@ -75,7 +81,9 @@ const Home = ({ ratio }) => {
                 <motion.span
                   whileInView={animationClientsCount}
                   ref={clientCount}
-                ></motion.span>
+                >
+                  0
+                </motion.span>
               )}
             </p>
             <span>Clients Worldwide</span>
@@ -90,7 +98,7 @@ const Home = ({ ratio }) => {
                     ref={projectCount}
                     whileInView={animationProjectsCount}
                   >
-                    500
+                    0
                   </motion.span>
                 )}
               </p>
@@ -105,7 +113,7 @@ const Home = ({ ratio }) => {
         </div>
       </section>
       <section>
-        <img src={me} alt="Abhishek" />
+        <img src={me} alt="Chestha" />
       </section>
       <BsChevronDown />
     </div>
