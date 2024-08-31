@@ -1,0 +1,5 @@
+ className={`timelineItem ${
+      index % 2 === 0 ? "leftTimeline" : "rightTimeline"
+    }`}
+
+If even then left timeline else right
