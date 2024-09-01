@@ -7,27 +7,35 @@ import {
 
 const Footer = () => {
     return (
-        <footer>
-            <div>
-                <img
-                src={"https://github.com/Chesthajain"}
-                alt="gitProfile"
-                />
-                
-                <h2>Chestha Jain</h2>
-                <p>Glad you like my profile.</p>
-            </div>
-
-            <aside>
-                <h2>My Profile</h2>
-                <a href="https://www.linkedin.com/in/chestha-jain/" target={"blank"}>
-                <AiFillLinkedin /></a>
-            </aside>
-            <a href="#home">
-                <AiOutlineArrowUp />
+      <footer>
+        <div>
+          <img
+            src={"https://avatars.githubusercontent.com/u/25058652"}
+            alt="Founder"
+          />
+  
+          <h2>Chestha Jain</h2>
+          <p>Web Developer</p>
+        </div>
+  
+        <aside>
+          <h2>Social Media</h2>
+  
+          <article>
+          <a href="https://youtube.com/6packprogrammer" target={"blank"}>
+              <AiFillGithub />
             </a>
-        </footer>
+            <a href="https://youtube.com/6packprogrammer" target={"blank"}>
+              <AiFillLinkedin />
+            </a>
+        
+          </article>
+        </aside>
+        <a href="#home">
+          <AiOutlineArrowUp />
+        </a>
+      </footer>
     );
-};
-
-export default Footer;
+  };
+  
+  export default Footer;
