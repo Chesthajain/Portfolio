@@ -10,7 +10,7 @@ const Footer = () => {
       <footer>
         <div>
           <img
-            src={"https://avatars.githubusercontent.com/u/25058652"}
+            src={"https://avatars.githubusercontent.com/u/60815342?v=4"}
             alt="Founder"
           />
   
