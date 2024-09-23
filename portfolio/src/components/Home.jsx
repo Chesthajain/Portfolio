@@ -1,23 +1,23 @@
-import React, { useRef } from "react";
-import { animate, motion } from "framer-motion";
+import React /*{ useRef }*/ from "react";
+import { /*animate*/ motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
-import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
+import { BsArrowUpRight /*BsChevronDown*/ } from "react-icons/bs";
 import me from "../assets/logo.png";
 
 const Home = ({ ratio }) => {
-  const clientCount = useRef(null);
-  const projectCount = useRef(null);
+  {/*const clientCount = useRef(null);
+  const projectCount = useRef(null);*/}
 
-  const animationClientsCount = () => {
+  {/* const animationClientsCount = () => {
     if (clientCount.current) {
       animate(0, 100, {
         duration: 1,
         onUpdate: (v) => (clientCount.current.textContent = v.toFixed()),
       });
     }
-  };
+  }; */}
 
-  const animationProjectsCount = () => {
+  {/* const animationProjectsCount = () => {
     if (projectCount.current) {
       animate(0, 500, {
         duration: 1,
@@ -25,7 +25,7 @@ const Home = ({ ratio }) => {
       });
     }
   };
-
+*/}
   const animations = {
     h1: {
       initial: {
@@ -59,7 +59,7 @@ const Home = ({ ratio }) => {
 
           <Typewriter
             options={{
-              strings: ["A Developer", "A Designer", "A Creator"],
+              strings: ["Web Developer"],
               autoStart: true,
               loop: true,
               cursor: "",
@@ -68,13 +68,13 @@ const Home = ({ ratio }) => {
           />
 
           <div>
-            <a href="mailto:cheshtajain1712@gmail.com">Hire Me</a>
+            <a href="mailto:cheshtajain1712@gmail.com">Contact me</a>
             <a href="#work">
-              Projects <BsArrowUpRight />
+              Projects<BsArrowUpRight />
             </a>
           </div>
 
-          <article>
+         {/* <article>
             <p>
               +
               {ratio < 2 && (
@@ -88,8 +88,8 @@ const Home = ({ ratio }) => {
             </p>
             <span>Clients Worldwide</span>
           </article>
-
-          <aside>
+*/}
+          {/* <aside>
             <article>
               <p>
                 +
@@ -109,13 +109,13 @@ const Home = ({ ratio }) => {
               <p>Contact</p>
               <span>cheshtajain1712@gmail.com</span>
             </article>
-          </aside>
+          </aside> */}
         </div>
       </section>
       <section>
         <img src={me} alt="Chestha" />
       </section>
-      <BsChevronDown />
+      {/*<BsChevronDown />*/}
     </div>
   );
 };
