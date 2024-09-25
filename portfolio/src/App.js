@@ -31,9 +31,9 @@ function App() {
       <Home ratio={ratio} />
       <Work />
       <Timeline />
-      <Services />
+      <Services />   <hr></hr>
       {/*<Testimonials />*/}
-      <Contact />
+      <Contact />   <hr></hr>
       <Footer />
       <Toaster />
     </>
